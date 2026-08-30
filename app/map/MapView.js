@@ -6,7 +6,7 @@ import L from "leaflet";
 
 const pinIcon = L.divIcon({
   className: "",
-  html: '<div style="width:12px;height:12px;border-radius:50%;background:#ff6a13;box-shadow:0 0 0 4px rgba(255,106,19,0.3);"></div>',
+  html: '<div style="width:12px;height:12px;border-radius:50%;background:#ff8c1a;box-shadow:0 0 0 4px rgba(255,140,26,0.3);"></div>',
   iconSize: [12, 12],
 });
 

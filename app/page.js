@@ -28,7 +28,7 @@ export default async function HomePage() {
               <path
                 d="M2,10 C40,2 70,15 100,8 C130,2 160,14 198,6"
                 fill="none"
-                stroke="#ff6a13"
+                stroke="#ff8c1a"
                 strokeWidth="3"
                 strokeLinecap="round"
               />

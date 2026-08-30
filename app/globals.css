@@ -5,8 +5,8 @@
   --bg-panel-2: #211d19;
   --text: #f1ece1;
   --text-dim: #948c7e;
-  --accent: #ff6a13;
-  --accent-soft: rgba(255,106,19,0.16);
+  --accent: #ff8c1a;
+  --accent-soft: rgba(255,140,26,0.16);
   --rule: #37322c;
   --font-serif: "Times New Roman", Georgia, "Liberation Serif", serif;
   --font-mono: "Courier New", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -92,8 +92,8 @@ nav.frames{
   top:2px;
   bottom:2px;
   background:var(--accent-soft);
-  border-top:1px dashed rgba(255,106,19,0.55);
-  border-bottom:1px dashed rgba(255,106,19,0.55);
+  border-top:1px dashed rgba(255,140,26,0.55);
+  border-bottom:1px dashed rgba(255,140,26,0.55);
   transform:rotate(-1deg);
   z-index:-1;
 }
@@ -251,7 +251,7 @@ table.gear td.notes{ color:var(--text-dim); font-size:14px; line-height:1.5; }
   font-size:10px;
   letter-spacing:1px;
   color:var(--accent);
-  border:1px solid rgba(255,106,19,0.5);
+  border:1px solid rgba(255,140,26,0.5);
   padding:3px 8px;
 }
 .map-layout{
@@ -275,7 +275,7 @@ table.gear td.notes{ color:var(--text-dim); font-size:14px; line-height:1.5; }
   height:9px;
   border-radius:50%;
   background:var(--accent);
-  box-shadow:0 0 0 4px rgba(255,106,19,0.22);
+  box-shadow:0 0 0 4px rgba(255,140,26,0.22);
   transform:translate(-50%,-50%);
 }
 .pin .pin-label{
@@ -323,7 +323,7 @@ table.gear td.notes{ color:var(--text-dim); font-size:14px; line-height:1.5; }
   letter-spacing:1px;
   color:var(--accent);
   text-decoration:none;
-  border-bottom:1px solid rgba(255,106,19,0.4);
+  border-bottom:1px solid rgba(255,140,26,0.4);
   padding-bottom:2px;
 }
 .location-info a:hover{ border-color:var(--accent); }
