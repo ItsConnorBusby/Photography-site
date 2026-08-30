@@ -2,21 +2,26 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
-  { href: "/", num: "00", label: "Home" },
-  { href: "/work", num: "01", label: "Work" },
-  { href: "/journal", num: "02", label: "Journal" },
-  { href: "/gear", num: "03", label: "Gear" },
-  { href: "/map", num: "04", label: "Map" },
-];
-
-export default function Sidebar() {
+export default function Sidebar({ settings }) {
   const pathname = usePathname();
+
+  const brandName = settings?.brandName || "[ Your Name ]";
+  const brandTagline = settings?.brandTagline || "Photography & field notes";
+
+  const links = [
+    { href: "/", num: "00", label: settings?.navHomeLabel || "Home" },
+    { href: "/work", num: "01", label: settings?.navWorkLabel || "Work" },
+    { href: "/journal", num: "02", label: settings?.navJournalLabel || "Journal" },
+    { href: "/gear", num: "03", label: settings?.navGearLabel || "Gear" },
+    { href: "/map", num: "04", label: settings?.navMapLabel || "Map" },
+  ];
+
   return (
     <aside className="sidebar">
       <div>
         <div className="brand">
-          [ Your Name ]<span>Photography &amp; field notes</span>
+          {brandName}
+          <span>{brandTagline}</span>
         </div>
         <nav className="frames">
           {links.map((link) => (
