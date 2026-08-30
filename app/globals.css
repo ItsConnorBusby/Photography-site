@@ -400,3 +400,23 @@ table.gear td.notes{ color:var(--text-dim); font-size:14px; line-height:1.5; }
   .hero-photo{ display:none; }
 }
 .photo-card{ text-decoration:none; }
+.journal-thumb{
+  width:160px;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border:1px solid var(--rule);
+  margin-bottom:14px;
+  display:block;
+}
+.gear-item-cell{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.gear-thumb{
+  width:34px;
+  height:34px;
+  object-fit:cover;
+  border:1px solid var(--rule);
+  flex-shrink:0;
+}

@@ -1,7 +1,8 @@
 export const revalidate = 30;
 import { client } from "../../sanity/lib/client";
+import { urlFor } from "../../sanity/lib/image";
 
-const GEAR_QUERY = `*[_type == "gearItem"] | order(order asc){name, category, notes}`;
+const GEAR_QUERY = `*[_type == "gearItem"] | order(order asc){name, category, notes, image}`;
 
 export default async function GearPage() {
   const items = await client.fetch(GEAR_QUERY);
@@ -16,7 +17,14 @@ export default async function GearPage() {
             <tr><th>Item</th><th>Category</th><th>Notes</th></tr>
             {items.map((item, i) => (
               <tr key={i}>
-                <td className="item">{item.name}</td>
+                <td className="item">
+                  <div className="gear-item-cell">
+                    {item.image && (
+                      <img className="gear-thumb" src={urlFor(item.image).width(80).url()} alt="" />
+                    )}
+                    <span>{item.name}</span>
+                  </div>
+                </td>
                 <td><span className="tag">{item.category ? item.category.toUpperCase() : ""}</span></td>
                 <td className="notes">{item.notes}</td>
               </tr>

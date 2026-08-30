@@ -1,8 +1,9 @@
 export const revalidate = 30;
 import { client } from "../../sanity/lib/client";
+import { urlFor } from "../../sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 
-const JOURNAL_QUERY = `*[_type == "journalEntry"] | order(date desc){title, date, body}`;
+const JOURNAL_QUERY = `*[_type == "journalEntry"] | order(date desc){title, date, body, mainImage}`;
 
 const components = {
   marks: {
@@ -24,6 +25,9 @@ export default async function JournalPage() {
       {entries.length === 0 && <p style={{ color: "var(--text-dim)" }}>No entries yet — add a Journal entry in the Studio.</p>}
       {entries.map((entry, i) => (
         <div className="entry" key={i}>
+          {entry.mainImage && (
+            <img className="journal-thumb" src={urlFor(entry.mainImage).width(320).url()} alt="" />
+          )}
           <div className="entry-meta">{entry.date}</div>
           <h2>{entry.title}</h2>
           <div style={{ color: "var(--text-dim)", fontSize: "15px", lineHeight: "1.65", maxWidth: "58ch" }}>

@@ -4,6 +4,7 @@ export default {
   type: "document",
   fields: [
     { name: "name", title: "Item name", type: "string" },
+    { name: "image", title: "Thumbnail image", type: "image", options: { hotspot: true } },
     {
       name: "category",
       title: "Category",

@@ -5,6 +5,7 @@ export default {
   fields: [
     { name: "title", title: "Title", type: "string" },
     { name: "date", title: "Date", type: "date" },
+    { name: "mainImage", title: "Main image", type: "image", options: { hotspot: true } },
     {
       name: "body",
       title: "Body",
