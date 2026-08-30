@@ -14,17 +14,15 @@ export default async function GearPage() {
       <div className="gear-wrap">
         <table className="gear">
           <tbody>
-            <tr><th>Item</th><th>Category</th><th>Notes</th></tr>
+            <tr><th></th><th>Item</th><th>Category</th><th>Notes</th></tr>
             {items.map((item, i) => (
               <tr key={i}>
-                <td className="item">
-                  <div className="gear-item-cell">
-                    {item.image && (
-                      <img className="gear-thumb" src={urlFor(item.image).width(80).url()} alt="" />
-                    )}
-                    <span>{item.name}</span>
-                  </div>
+                <td className="thumb-cell">
+                  {item.image && (
+                    <img className="gear-thumb" src={urlFor(item.image).width(160).url()} alt="" />
+                  )}
                 </td>
+                <td className="item">{item.name}</td>
                 <td><span className="tag">{item.category ? item.category.toUpperCase() : ""}</span></td>
                 <td className="notes">{item.notes}</td>
               </tr>

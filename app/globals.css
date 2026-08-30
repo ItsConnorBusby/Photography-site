@@ -414,9 +414,12 @@ table.gear td.notes{ color:var(--text-dim); font-size:14px; line-height:1.5; }
   gap:10px;
 }
 .gear-thumb{
-  width:34px;
-  height:34px;
+  width:64px;
+  height:64px;
   object-fit:cover;
   border:1px solid var(--rule);
-  flex-shrink:0;
+  display:block;
+}
+table.gear td.thumb-cell{
+  width:80px;
 }
