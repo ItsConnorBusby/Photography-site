@@ -1,3 +1,4 @@
+export const revalidate = 30;
 import { client } from "../../sanity/lib/client";
 
 const GEAR_QUERY = `*[_type == "gearItem"] | order(order asc){name, category, notes}`;

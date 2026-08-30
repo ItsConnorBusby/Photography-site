@@ -1,3 +1,4 @@
+export const revalidate = 30;
 import Link from "next/link";
 import { client } from "../sanity/lib/client";
 import { urlFor } from "../sanity/lib/image";

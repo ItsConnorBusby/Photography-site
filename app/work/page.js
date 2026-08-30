@@ -1,3 +1,4 @@
+export const revalidate = 30;
 import { client } from "../../sanity/lib/client";
 
 const WORK_QUERY = `*[_type == "workPost"] | order(order asc){frameNumber, instagramUrl}`;
