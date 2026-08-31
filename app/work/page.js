@@ -34,14 +34,7 @@ export default async function WorkPage() {
       <div className="photo-grid">
         {withThumbnails.length === 0 && <p style={{ color: "var(--text-dim)" }}>No photos added yet — add a Work photo in the Studio.</p>}
         {withThumbnails.map((post, i) => (
-          
-            key={i}
-            href={post.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="photo-card"
-            style={post.thumbnail ? { backgroundImage: `url(${post.thumbnail})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}
-          >
+          <a key={i} href={post.instagramUrl} target="_blank" rel="noopener noreferrer" className="photo-card" style={post.thumbnail ? { backgroundImage: `url(${post.thumbnail})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}>
             <span className="frame-no">{post.frameNumber}</span>
           </a>
         ))}
