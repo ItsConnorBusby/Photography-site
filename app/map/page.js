@@ -2,7 +2,7 @@ export const revalidate = 30;
 import { client } from "../../sanity/lib/client";
 import MapClientWrapper from "./MapClientWrapper";
 
-const LOCATIONS_QUERY = `*[_type == "location"]{name, coordinates, posts}`;
+const LOCATIONS_QUERY = `*[_type == "location"]{name, category, coordinates, posts, "linkedJournalPost": linkedJournalPost->{title, "slug": slug.current}}`;
 
 export default async function MapPage() {
   const locations = await client.fetch(LOCATIONS_QUERY);

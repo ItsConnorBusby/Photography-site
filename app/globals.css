@@ -534,3 +534,24 @@ table.gear td.thumb-cell{
 @media (max-width:480px){
   .journal-grid{ grid-template-columns:1fr; }
 }
+.category-legend{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:1px;
+  color:var(--text-dim);
+}
+.category-legend span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.legend-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  display:inline-block;
+}
