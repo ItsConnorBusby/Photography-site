@@ -453,3 +453,40 @@ table.gear td.thumb-cell{
   letter-spacing:1px;
 }
 .footer-cta:hover{ opacity:0.9; }
+.gear-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+.gear-card{
+  border:1px solid var(--rule);
+  display:flex;
+  flex-direction:column;
+}
+.gear-card-image{
+  aspect-ratio:4/3;
+  background:linear-gradient(160deg, var(--bg-panel), var(--bg-panel-2));
+  background-size:cover;
+  background-position:center;
+}
+.gear-card-body{
+  padding:16px;
+}
+.gear-card-body h3{
+  font-family:var(--font-serif);
+  font-weight:400;
+  font-size:19px;
+  margin:0 0 8px;
+}
+.gear-card-notes{
+  color:var(--text-dim);
+  font-size:14px;
+  line-height:1.5;
+  margin-top:10px;
+}
+@media (max-width:760px){
+  .gear-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:480px){
+  .gear-grid{ grid-template-columns:1fr; }
+}

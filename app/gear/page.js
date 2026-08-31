@@ -11,24 +11,18 @@ export default async function GearPage() {
     <div>
       <div className="eyebrow">03 <span className="accent">/</span> GEAR</div>
       <h1 className="hero" style={{ fontSize: "40px" }}>Kit list</h1>
-      <div className="gear-wrap">
-        <table className="gear">
-          <tbody>
-            <tr><th></th><th>Item</th><th>Category</th><th>Notes</th></tr>
-            {items.map((item, i) => (
-              <tr key={i}>
-                <td className="thumb-cell">
-                  {item.image && (
-                    <img className="gear-thumb" src={urlFor(item.image).width(160).url()} alt="" />
-                  )}
-                </td>
-                <td className="item">{item.name}</td>
-                <td><span className="tag">{item.category ? item.category.toUpperCase() : ""}</span></td>
-                <td className="notes">{item.notes}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="gear-grid">
+        {items.length === 0 && <p style={{ color: "var(--text-dim)" }}>No gear added yet — add a Gear item in the Studio.</p>}
+        {items.map((item, i) => (
+          <div className="gear-card" key={i}>
+            <div className="gear-card-image" style={item.image ? { backgroundImage: `url(${urlFor(item.image).width(500).url()})` } : {}}></div>
+            <div className="gear-card-body">
+              <h3>{item.name}</h3>
+              <span className="tag">{item.category ? item.category.toUpperCase() : ""}</span>
+              <p className="gear-card-notes">{item.notes}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
