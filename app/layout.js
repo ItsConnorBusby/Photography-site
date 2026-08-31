@@ -1,5 +1,6 @@
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 import { client } from "../sanity/lib/client";
 
 export const revalidate = 30;
@@ -18,7 +19,10 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Sidebar settings={settings} />
-        <main>{children}</main>
+        <main>
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

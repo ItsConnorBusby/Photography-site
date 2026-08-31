@@ -423,3 +423,33 @@ table.gear td.notes{ color:var(--text-dim); font-size:14px; line-height:1.5; }
 table.gear td.thumb-cell{
   width:80px;
 }
+.site-footer{
+  margin-top:64px;
+  padding-top:24px;
+  border-top:1px solid var(--rule);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:1px;
+}
+.footer-ig{
+  color:var(--text-dim);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+.footer-ig:hover{ color:var(--text); border-color:var(--rule); }
+.footer-cta{
+  display:inline-block;
+  background:var(--accent);
+  color:#3a1400;
+  padding:10px 18px;
+  text-decoration:none;
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:1px;
+}
+.footer-cta:hover{ opacity:0.9; }
