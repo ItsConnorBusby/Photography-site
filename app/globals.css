@@ -490,3 +490,47 @@ table.gear td.thumb-cell{
 @media (max-width:480px){
   .gear-grid{ grid-template-columns:1fr; }
 }
+.journal-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+.journal-card{
+  display:block;
+  text-decoration:none;
+  border:1px solid var(--rule);
+}
+.journal-card-image{
+  aspect-ratio:4/5;
+  background:linear-gradient(160deg, var(--bg-panel), var(--bg-panel-2));
+  background-size:cover;
+  background-position:center;
+}
+.journal-card-body{
+  padding:16px;
+}
+.journal-card-meta{
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:1px;
+  color:var(--text-dim);
+  margin-bottom:8px;
+}
+.journal-card h3{
+  font-family:var(--font-serif);
+  font-weight:400;
+  font-size:20px;
+  color:var(--text);
+  margin:0 0 8px;
+}
+.journal-cats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+@media (max-width:760px){
+  .journal-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:480px){
+  .journal-grid{ grid-template-columns:1fr; }
+}

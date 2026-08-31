@@ -4,7 +4,15 @@ export default {
   type: "document",
   fields: [
     { name: "title", title: "Title", type: "string" },
+    { name: "slug", title: "Slug", type: "slug", options: { source: "title" }, description: "Click 'Generate' after entering a title" },
     { name: "date", title: "Date", type: "date" },
+    {
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "string" }],
+      options: { list: ["Travel", "Coffee", "Gear", "Field notes"] },
+    },
     { name: "mainImage", title: "Main image", type: "image", options: { hotspot: true } },
     {
       name: "body",
